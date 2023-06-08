@@ -28,7 +28,7 @@ header h1{
 
 nav{
     background-color: rgb(52, 0, 100);
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
 }
 
 nav ul{
@@ -52,7 +52,7 @@ nav ul li a{
 
 nav ul li a:hover{
     background-color:  rgba(55, 112, 74, 0.589);
-    color: white;
+    color: whitesmoke;
 }
 
 nav ul li a.activo{
@@ -79,9 +79,147 @@ footer{
     justify-content: flex-end;
     flex-direction: column;
     background-color: black;
-    text-align:end ;
+    text-align: right ;
 }
 
 footer p{
     color: yellowgreen;
+}
+
+                                /* SECCION  HOME */
+h2{
+    color:rgb(52, 0, 100);
+    font-family: 'Teko', sans-serif;
+    font-weight: 400px;
+    margin: 0 0 1em;
+
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.homeimg{
+    margin-bottom:1.5em;
+}
+
+.columnas{
+    overflow: hiddden;
+}
+
+.bienvenidos, .testimonios{
+    box-sizing: border-box;
+}
+
+.bienvenidos{
+    width: 75%;
+    padding-right: 2em;
+}
+
+.testimonios{
+    width: 25%;
+}
+
+.testimonio{
+    background-color: #ccc;
+    padding: 1em;
+}
+
+.testimonio .cita{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.4em;
+    display: block;
+}
+
+.testimonio .autor{
+    font-size:0.7em;
+    text-align: center;
+    margin: 1em 0;
+    display: block;
+}
+
+                                /* ------------------------------------- */
+                                /* SECCION NOSOTROS */
+
+.historia p{
+    font-size:0.8em;
+}
+.personas{
+    overflow: hidden;
+}
+.persona{
+    width: 18%;
+    border: 1px dotted limegreen;
+    border-radius: 0.25em;
+    float: left;
+    margin-left: 2.25%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.persona img {
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        margin: 0.8em 0 1em;
+        max-width:70%;
+}
+.persona h5{
+    font-size: 0.9em;
+}
+.persona h6{
+    font-size: 0.8em;
+    font-style: italic;
+}
+.persona p{
+    font-size: 0.7em;
+    color: #444;
+    margin: 0 1em 1em;
+}
+.persona:first-child{
+    margin-left: 0;
+}
+
+                        /* SECCION AMBIENTACION */
+
+.locacion{
+    border: 1px dotted limegreen;
+    border-radius: 0.7em;
+    margin: 1em 0;
+    padding: 1em;
+    overflow: hidden;
+}
+.locacion .info{
+    width: 75%;
+}
+.locacion .info h4{
+    color:rgb(80, 0, 155);
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 500;
+    margin: 0 0 1em;
+    border-bottom: 1px solid yellowgreen;
+    padding-bottom: 0.5em;
+}
+.locacion .info p{
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+.locacion img{
+    border-radius: 0.8em;
+}
+.locacion:nth-child(even) img{
+    float: right;
+    margin: 0 0 0 1em;
+}
+.locacion:nth-child(even) .info{
+    float: left;
+}
+locacion:nth-child(odd) img{
+    float: left;
+    margin: 0 1em 0 0;
+
 }
