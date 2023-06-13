@@ -3,18 +3,18 @@ document.getElementById("character-form").addEventListener("submit", function(ev
     event.preventDefault(); 
 
     // Valores
-    var name = document.getElementsByClassName("name").value;
-    var age = document.getElementsByClassName("age").value;
-    var birthdate = document.getElementsByClassName("birthdate").value;
-    var birthplace = document.getElementsByClassName("birthplace").value;
-    var profession = document.getElementsByClassName("profession").value;
-    var physicalDescription = document.getElementsByClassName("physicalDescription").value;
-    var personality = document.getElementsByClassName("personality").value;
-    var residence = document.getElementsByClassName("residence").value;
-    var strengths = document.getElementsByClassName("strengths").value;
-    var weaknesses = document.getElementsByClassName("weaknesses").value;
-    var history = document.getElementsByClassName("history").value;
-    var funFacts = document.getElementsByClassName("funFacts").value;
+    var name = document.getElementsById("name").value;
+    var age = document.getElementsById("age").value;
+    var birthdate = document.getElementsById("birthdate").value;
+    var birthplace = document.getElementsById("birthplace").value;
+    var profession = document.getElementsById("profession").value;
+    var physicalDescription = document.getElementsById("physicalDescription").value;
+    var personality = document.getElementsById("personality").value;
+    var residence = document.getElementsById("residence").value;
+    var strengths = document.getElementsById("strengths").value;
+    var weaknesses = document.getElementsById("weaknesses").value;
+    var history = document.getElementsById("history").value;
+    var funFacts = document.getElementsById("funFacts").value;
 
     // Contenido del pdf
     var pdfContent = "Nombre: " + name +
@@ -31,10 +31,13 @@ document.getElementById("character-form").addEventListener("submit", function(ev
         "\nDatos Curiosos: " + funFacts;
 
     // Generar
+
+generatePDF(pdfContent);
 });
 
-function generatePDF(content);
-generatePDF(pdfContent);
-import { jsPDF } from "jspdf"
-const doc = new jsPDF();
-doc.save("a4.pdf");
+function generatePDF(content) {
+    // Here you would use a PDF generation library, like jsPDF or pdfmake, to generate the PDF using the provided content.
+    // Unfortunately, the JavaScript environment in this demo does not support PDF generation, so you'll need to implement this part in your own development environment.
+    // You can refer to the documentation of a PDF generation library for the necessary steps to generate the PDF.
+    console.log(content); // Placeholder to display the generated content in the console
+}

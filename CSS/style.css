@@ -1,45 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
 
-
+}
 body{
     font-family:'Courier New', Courier, monospace;
     font-size: 16px;
     line-height: 20px;
+    /* height: 100%; */
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
 }
 
 
 header{
 
     background-color: black;
-    padding: 1em 0;
+    padding: 0 0;
 }
 
-header h1{
+#columnasHeader{
+    flex-flow: wrap;
+    column-count:2;
+    column-gap: 50px;
+    column-rule: 4px none limegreen;
+    list-style: none;
+    -webkit-column-count: 2;
+}
+
+#columnasHeader li{
+    margin:auto;
+}
+header li{
+    font-size: 25px;
+    text-shadow: 0 0 0.1em rgba(106, 3, 137, 0.722), 0 0 0.1em rgba(152, 2, 198, 0.722),
+		0 0 0.1em rgba(152, 2, 198, 0.722);
+    color: rgba(0, 255, 0, 0.708);
+    font-family: 'Teko', sans-serif;
+}
+/* header h1{
     color:rgb(80, 0, 155);
     text-shadow: 0 0 0.1em rgba(116, 223, 112, 0.918), 0 0 0.1em rgba(116, 223, 112, 0.918),
 		0 0 0.1em rgb(25, 13, 109);
     font-size: 2.5em;
-    /* font-style: Italic; */
-    font-family: 'Teko', sans-serif;
+    font-style: Italic; 
+    /font-family: 'Teko', sans-serif;
     display: inline-block;
     position: relative;
-    text-align: center;
-    /* bottom: 30px; */
-}
+    text-align: center; 
+    bottom: 30px;
+} */
 
 nav{
     background-color: rgb(52, 0, 100);
-    margin-bottom: 0.5em;
+    height: 100%;
+    /* margin-bottom: 0.5em; */
 }
+
+@media (min-width>=800px){
+    .nav {
+        
+
+    }
+}
+
 
 nav ul{
     list-style: none;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 nav ul li{
     display: inline-block;
     width: 16.3%;
+    height: 100%;
 }
 
 nav ul li a{
@@ -59,11 +96,14 @@ nav ul li a.activo{
     background-color:  rgb(55, 112, 74);
 }
 
-.holder{
-    width: 960px;
-    margin: 0 auto;
+.holderMenu{
+    width: 100%;
+    margin: auto;
 }
 
+.holderMain{
+    width: 100%;
+}
 footer{
     background-color: #000000;
     clear: both;
@@ -75,23 +115,26 @@ footer{
 }
 
 .menuFooter{
-    display: flex;
-    justify-content: flex-end;
+    display:flex;
     flex-direction: column;
     background-color: black;
-    text-align: right ;
 }
 
 footer p{
     color: yellowgreen;
 }
 
+
+
                                 /* SECCION  HOME */
-h2{
+.encabezadoPag {
     color:rgb(52, 0, 100);
+    text-shadow: 0 0 0.1em rgba(116, 223, 112, 0.918), 0 0 0.1em rgba(116, 223, 112, 0.918),
+    0 0 0.1em rgb(25, 13, 109);
     font-family: 'Teko', sans-serif;
-    font-weight: 400px;
-    margin: 0 0 1em;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
 
 }
 
@@ -105,10 +148,11 @@ h2{
 
 .homeimg{
     margin-bottom:1.5em;
+    width:auto;
 }
 
 .columnas{
-    overflow: hiddden;
+    overflow: hidden;
 }
 
 .bienvenidos, .testimonios{
@@ -133,7 +177,7 @@ h2{
     font-weight: bold;
     font-style: italic;
     font-size: 1.4em;
-    display: block;
+    display: flexbox;
 }
 
 .testimonio .autor{
@@ -148,19 +192,26 @@ h2{
 
 .historia p{
     font-size:0.8em;
+    font-family:'Times New Roman', Times, serif;
 }
 .personas{
     overflow: hidden;
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
 }
 .persona{
-    width: 18%;
+    width: auto;
     border: 1px dotted limegreen;
     border-radius: 0.25em;
-    float: left;
     margin-left: 2.25%;
+    margin-right: 2.25%;
     box-sizing: border-box;
     text-align: center;
 }
+
 .persona img {
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
@@ -177,10 +228,11 @@ h2{
 .persona p{
     font-size: 0.7em;
     color: #444;
+    text-align: justify;
     margin: 0 1em 1em;
 }
 .persona:first-child{
-    margin-left: 0;
+    margin-left: auto;
 }
 
                         /* SECCION AMBIENTACION */
