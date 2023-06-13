@@ -58,9 +58,10 @@ nav{
     /* margin-bottom: 0.5em; */
 }
 
-@media (min-width>=800px){
+@media (min-width≤800px){
     .nav {
-        
+        display: flex;
+        flex-direction: column;
 
     }
 }
